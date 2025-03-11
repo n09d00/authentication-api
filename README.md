@@ -36,4 +36,39 @@ Start the server:
 npm run start
 ```
 
+## Get Started with Docker
+
+Clone this repository.
+```
+git clone https://github.com/n09d00/authentication-api.git
+```
+
+Change to the root directory of this project.
+```
+cd authentication-api
+```
+
+Add a .env file to the root directory with your MongoDB URI and JWT Secret.
+```
+MONGO_DB_URI="Your Mongo DB URI"
+JWT_SECRET="Your JWT Secret"
+```
+
+Build the Dockerfile (development phase) 
+
+```
+docker build -t "Your image name" .
+```
+
+or Dockerfile.prod (production phase)
+
+```
+docker build -t "Your image name" -f Dockerfile.prod .
+```
+
+Run the Docker image as a container
+```
+docker run --rm --env-file .env "Your image name"
+```
+
 
